@@ -14,13 +14,9 @@ export class Revivew {
   id: number;
 
   @Column()
-  @IsNotEmpty()
-  @IsNumber()
   rating: number;
 
   @Column()
-  @IsNotEmpty()
-  @IsString()
   comment: string;
 
   @CreateDateColumn({ type: 'timestamp', default: () => CURRENT_TIMESTAMP })

@@ -1,5 +1,5 @@
-import { IsNotEmpty, IsNumber, IsString } from 'class-validator';
 import { CURRENT_TIMESTAMP } from 'src/utils/constants';
+
 import {
   Column,
   CreateDateColumn,
@@ -14,22 +14,15 @@ export class Product {
   id: number;
 
   @Column()
-  @IsNotEmpty()
   name: string;
 
   @Column()
-  @IsNumber()
-  @IsNotEmpty()
   price: number;
 
   @Column()
-  @IsString()
-  @IsNotEmpty()
   description: string;
 
   @Column()
-  @IsString()
-  @IsNotEmpty()
   category: string;
 
   @CreateDateColumn({ type: 'timestamp', default: () => CURRENT_TIMESTAMP })
