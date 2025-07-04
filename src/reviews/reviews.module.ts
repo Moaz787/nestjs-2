@@ -1,8 +1,6 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Revivew } from './reviews.entity';
-import { ProductsController } from 'src/products/products.controller';
-import { ProductsService } from 'src/products/products.service';
 import { ReviewsController } from './reviews.controller';
 import { ReviewsService } from './reviews.service';
 
