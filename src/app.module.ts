@@ -1,15 +1,15 @@
 import { Module } from '@nestjs/common';
 import { ProductsModule } from './products/products.module';
-import { ProductsController } from './products/products.controller';
-import { ProductsService } from './products/products.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule, ConfigService } from '@nestjs/config';
+import { ReviewsMdoule } from './reviews/reviews.module';
+import { UsersModule } from './users/users.module';
 
 @Module({
   imports: [
     ProductsModule,
-    ProductsController,
-    ProductsService,
+    ReviewsMdoule,
+    UsersModule,
     TypeOrmModule.forRootAsync({
       inject: [ConfigService],
       useFactory: async (configService: ConfigService) => ({
